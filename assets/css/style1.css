@@ -1,0 +1,164 @@
+#body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#navbar {
+	position: relative;
+	height: 24px;
+	padding: 10px;
+	width: 100%;
+	background-color: #fff;
+	color: #505959;
+	font-size: 16px;
+	letter-spacing: .025em;
+	font-weight: 400;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+.navbar_items {
+	position: relative;
+	right: 6px;
+	margin-left: 1100px;
+}
+
+.navbar_items .item {
+	display: inline-block;
+	cursor: pointer;
+	margin-right: 15px;
+	transition: 0.3s;
+	-moz-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	position: relative;
+	margin-left: 20px;
+	color: #505959;
+}
+
+.navbar_items .item:hover {
+	opacity: 0.5;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#title_container {
+	margin: 20px 10px;
+	text-align: center;
+	height: 30px;
+}
+
+.homepage_container {
+	display: inline-block;
+}
+
+body, html {
+	margin: 0;
+	font-family: Lato;
+	background-color: #ededed;
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	margin: 0;
+}
+h4, h1 {
+	margin: 0;
+	color: #1a1a1a;
+	font-weight: 300;
+}
+input {
+	float: left;
+}
+ul {
+	list-style: none;
+	margin: 0;
+}
+li {
+	float: right;
+}
+
+#navbar {
+	background-color: #fff;
+	color: #505959;
+	font-size: 16px;
+	letter-spacing: .025em;
+	font-weight: 400;
+	border: 1px solid rgba(0,0,0,0.2);
+}
+
+#search_bar {
+	height: 35px;
+	width: 300px;
+	opacity: 0.3;
+	background-color: #505959;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 25px;
+	float: left;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+}
+
+img {
+	object-fit: cover;
+	width: 1000px;
+	margin: 30px;
+	margin-bottom: 30px;
+	z-index: 100;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.text {
+	position: absolute;
+	font-size: 2em;
+  	left: 10%;
+  	color: white;
+  	font-weight: 400;
+  	opacity: 0.5;
+  	z-index: 200;
+	top: 40%;
+	margin-left: 10px;
+}
+
+.black-text {
+	position: absolute;
+	font-size: 2em;
+  	left: 10%;
+  	color: black;
+  	font-weight: 400;
+  	opacity: 0.5;
+  	z-index: 200;
+	top: 40%;
+	margin-left: 10px;
+}
+
+.header_item {
+	position: relative;
+	cursor: pointer;
+	width: 69%;
+	display: block;
+	margin-left: 13.5%;
+}
+
+#title {
+	font-size: 35px;
+	position:absolute;
+	left:5px;
+	top:0;
+	font-family: 'Dancing Script', cursive;
+}
+
+#subtitle {
+	font-size: 35px;
+	padding-top: 10px;
+}
+
+
+
