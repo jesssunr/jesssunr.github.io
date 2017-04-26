@@ -17,9 +17,9 @@
 }
 
 .navbar_items {
-	position: relative;
-	right: 6px;
-	margin-left: 1100px;
+	position: absolute;
+	right: 1%;
+	margin-right: 10px;
 }
 
 .navbar_items .item {
@@ -35,34 +35,6 @@
 
 .navbar_items .item:hover {
 	opacity: 0.5;
-}
-
-.sub-menu {
-	position: fixed;
-	background: white;
-	visibility: hidden;
-	width: 90px;
-	padding-top: 30px;
-}
-
-.sub-item {
-	padding: 20px;
-	margin-bottom: 20px;
-	text-decoration: none;
-	opacity: 1;
-	text-align: center;
-}
-
-.sub-menu .sub-item {
-	text-align: center;
-}
-
-.item:hover .sub-menu {
-	visibility: visible;
-}
-
-.sub-menu .sub-item:hover {
-	opacity: 1;
 }
 
 a:link {

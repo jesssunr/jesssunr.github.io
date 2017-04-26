@@ -16,9 +16,9 @@
 }
 
 .navbar_items {
-	position: relative;
-	right: 6px;
-	margin-left: 1100px;
+	position: absolute;
+	right: 1%;
+	margin-right: 10px;
 }
 
 .navbar_items .item {
