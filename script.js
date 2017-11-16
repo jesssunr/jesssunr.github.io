@@ -8,6 +8,7 @@ $(document).ready(function() {
 	$("#done").hide();
 	$("#clear").hide();
 	$("#help").show();
+	$("#effect").hide();
 
 	$(".emoji-eyes").click(function(){
 		var id = $(this).attr('id');
@@ -99,6 +100,7 @@ $(document).ready(function() {
 		$("#done").hide();
 		$("#clear").show();
 		$(".emoji-mouth").off("click");
+		loop.start();
 	});
 
 	$("#clear").click(function(){ 
@@ -112,7 +114,30 @@ $(document).ready(function() {
 		$("#title").text("Choose my eyes!");
 		$("#clear").hide();
 		$("#next1").show();
+		$('.star').remove();
 	});
- 
-}); 
 
+	var limit = 100,
+    body = document.body;
+	loop = {
+	    start: function() {
+	        for (var i = 0; i <= limit; i++) {
+	            var star = this.newStar();
+	            star.style.top = this.rand() * 100 + "%";
+	            star.style.left = this.rand() * 100 + "%";
+	            star.style.webkitAnimationDelay = this.rand() + "s";
+	            star.style.mozAnimationDelay = this.rand() + "s";
+	            body.appendChild(star);
+	        };
+	    },
+	    rand: function() {
+	        return Math.random();
+	    },
+	    newStar: function() {
+	        var d = document.createElement('div');
+	        d.innerHTML = '<figure class="star"><figure class="star-top"></figure><figure class="star-bottom"></figure></figure>';
+	        return d.firstChild;
+	    },
+	};
+
+});
