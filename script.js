@@ -8,113 +8,85 @@ $(document).ready(function() {
 	$("#done").hide();
 	$("#clear").hide();
 	$("#help").show();
+
 	$(".emoji-eyes").click(function(){
 		var id = $(this).attr('id');
 		var eyes = document.getElementById(id); 
 		var eyes_txt = eyes.textContent || eyes.innerText;
 		var str = String(eyes_txt); 
 		var eyes_splitted = str.split(" ");
-		console.log(eyes_splitted[0]);
-		console.log(eyes_splitted[1]);
 		$("#left-eye-holder").text(eyes_splitted[0]);
 		$("#right-eye-holder").text(eyes_splitted[1]);
 		$("#left-eye-holder").show();
 		$("#right-eye-holder").show();
 	});
-	$("#face-holder").hide();
-	$("#next1").click(function(){
 
+	$(".emoji-face").click(function(){
+		$("#left-eye-holder").show();
+		$("#right-eye-holder").show();
+		var id = $(this).attr('id');
+		var face = document.getElementById(id).innerText;
+		var str = String(face); 
+		var face_splitted = str.split(" ");
+		$("#left-face-holder").text(face_splitted[0]);
+		$("#right-face-holder").text(face_splitted[1]);
+		$("#left-face-holder").show();
+		$("#right-face-holder").show();
+	});
+
+	$(".emoji-mouth").click(function(){
+		$("#help").hide();
+		var id = $(this).attr('id');
+		var str = document.getElementById(id).innerText; 
+		$("#mouth-holder").text(str);
+		$("#mouth-holder").show();
+	});
+
+	$("#next1").click(function(){
 		$(".emoji-eyes").hide();
 		$(".emoji-face").show();
 		$("#left-eye-holder").show();
 		$("#right-eye-holder").show();
 		$("#next1").hide();
 		$("#next2").show();
-		$("#title").text("Choose Face");
-
-		$(".emoji-face").click(function(){
-			$("#help").hide();
-			$("#back1").show();
-			$("#left-eye-holder").show();
-			$("#right-eye-holder").show();
-			var id = $(this).attr('id');
-			var face = document.getElementById(id).innerText; 
-			// var face = face.textContent || face.innerText;
-			var str = String(face); 
-			var face_splitted = str.split(" ");
-			console.log(face_splitted[0]);
-			console.log(face_splitted[1]);
-			$("#left-face-holder").text(face_splitted[0]);
-			$("#right-face-holder").text(face_splitted[1]);
-			$("#left-face-holder").show();
-			$("#right-face-holder").show();
-			$("#back1").click(function(){ 
-			$(".emoji-face").hide();
-			$(".emoji-eyes").show();
-			$("#help").show();
-			$("#title").text("Change Eyes");	
-				$("#back1").hide();
-					$("#next2").click(function(){ 
-						$(".emoji-eyes").hide();
-						$(".emoji-face").show();
-						$(".emoji-mouth").hide();
-						$("#title").text("Choose Face");	
-						$("#next2").show();
-						$("#back2").hide();
-						$("#done").hide();
-						$("#next2").click(function(){ 
-							$("#title").text("Choose Mouth");	
-							$(".emoji-eyes").hide();
-							$(".emoji-face").hide();
-							$(".emoji-mouth").show();
-							$("#next2").hide();
-							$("#done").show();
-							
-						});
-						
-					})
-			
-		});
+		$("#title").text("Choose my face!");
+		$("#back1").show();
+		$("#help").hide();
 	});
 
 	$("#next2").click(function(){ 
+		$("#next2").hide();
 		$("#back1").hide();
+		$("#back2").show();
 		$(".emoji-face").hide();
 		$(".emoji-mouth").show();
 		$("#eye-holder").show();
 		$("#left-face-holder").show();
 		$("#right-face-holder").show();
-		$("#title").text("Choose Mouth");
-		$("#help").show();
+		$("#title").text("Choose my mouth!");
 		$("#done").show();
-		$(".emoji-mouth").click(function(){
-			$("#help").hide();
-			$("#eye-holder").show();
-			$("#face-holder").show();
-			var id = $(this).attr('id');
-			var str = document.getElementById(id).innerText; 
-			$("#mouth-holder").text(str);
-			$("#mouth-holder").show();
-			$("#done").show();	
-			$("#back2").show();
-			$("#back2").click(function(){ 
-					$("#title").text("Change Face");
-					$("#help").show();	
-					$(".emoji-mouth").hide();
-					$(".emoji-face").show();
-					$("#done").hide();
-					$("#next2").show();
-					$("#back2").hide();
-					$("#next2").click(function(){ 
-						$(".emoji-mouth").show();
-						$(".emoji-face").hide();
-
-				});
-			});
-		});
-	$("#next2").hide();
-	
 	});
+
+	$("#back1").click(function(){ 
+		$(".emoji-face").hide();
+		$(".emoji-eyes").show();
+		$("#help").show();
+		$("#title").text("Change my eyes!");	
+		$("#back1").hide();
+		$("#next2").hide();
+		$("#next1").show();
+	});
+
+	$("#back2").click(function(){ 
+		$("#title").text("Choose my face!");
+		$(".emoji-mouth").hide();
+		$(".emoji-face").show();
+		$("#done").hide();
+		$("#next2").show();
+		$("#back1").show();
+		$("#back2").hide();
+	});
+
 	$("#done").click(function(){ 
 		$("#left-eye-holder").show();
 		$("#right-eye-holder").show();
@@ -122,12 +94,13 @@ $(document).ready(function() {
 		$("#right-face-holder").show();
 		$("#mouth-holder").show();
 		$("#back2").hide();
-		$("#title").text("Copy Your Custom Emoji");	
+		$("#title").text("Copy me, copy me!!");	
 		$("#help").show();
 		$("#done").hide();
 		$("#clear").show();
 		$(".emoji-mouth").off("click");
 	});
+
 	$("#clear").click(function(){ 
 		$("#left-eye-holder").hide();
 		$("#right-eye-holder").hide();
@@ -136,11 +109,10 @@ $(document).ready(function() {
 		$("#mouth-holder").hide();
 		$(".emoji-mouth").hide();
 		$(".emoji-eyes").show();
-		$("#title").text("Choose Eyes");
+		$("#title").text("Choose my eyes!");
 		$("#clear").hide();
 		$("#next1").show();
 	});
-
-	}); 
+ 
 }); 
 
