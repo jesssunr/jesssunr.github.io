@@ -1,259 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<title>Text Emoticon Generator</title>
+</head>
+<body>
 
-  <head>
+<h1>Welcome to My Text Emoticon Generator</h1>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">	
+	</script> 
+	<script src="script.js"></script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<div id="container">
+	<div id="top-bar">
+		<div id="title">Choose Eyes</div> 
+		<button id="help"></button>
+		<button id="next1">→</button>
+		<button id="back1">←</button>
+		<button id="next2">→</button>
+		<button id="back2">←</button>
+		<button id="done">Done</button>
+		<button id="clear">Clear</button>
+	</div>
+	
+	<div id="result">
+		<div id="image-holder">
+			<div class="text-holder" id="left-face-holder">(</div>
+			<div class="text-holder" id="left-eye-holder">^</div>
+			<div class="text-holder" id="mouth-holder">ω</div>
+			<div class="text-holder" id="right-eye-holder">^</div>
+			<div class="text-holder" id="right-face-holder">)</div>
+		</div>
+	</div>
+	<div id="keyboard-container">
+		<div id="keyboard">
+			<div class="keys">
+				<div id="first-row">
+					<button class="emoji-eyes" id="eye1">^ ^</button>
+					<button class="emoji-eyes" id="eye2">* *</button>
+					<button class="emoji-eyes" id="eye3">- -</button>
+					<button class="emoji-eyes" id="eye4">◕ ◕</button>
+					<button class="emoji-eyes" id="eye5">¬ ¬</button>
+				</div>
+				<div id="second-row">
+					<button class="emoji-eyes" id="eye9">♥ ♥</button>
+					<button class="emoji-eyes" id="eye10">ò ó</button>
+					<button class="emoji-eyes" id="eye7">˘ ˘</button>
+					<button class="emoji-eyes" id="eye8">• •</button>
+					<button class="emoji-eyes" id="eye6">~ ^</button>
+				</div>
+				<div id="third-row">
+					<button class="emoji-eyes" id="eye13">ʘ ʘ</button>
+		        	<button class="emoji-eyes" id="eye14">◉ ◉</button>
+		        	<button class="emoji-eyes" id="eye15">> ></button>
+		            <button class="emoji-eyes" id="eye11">■ ■</button>
+		            <button class="emoji-eyes" id="eye12">⚆ ⚆</button>
+		        </div>
+		        <div id="fourth-row">
+		        	<button class="emoji-eyes" id="eye17">ᵔ ᵔ</button>
+		        	<button class="emoji-eyes" id="eye18">= =</button>
+		        	<button class="emoji-eyes" id="eye19">⇀ ↼</button>
+		        	<button class="emoji-eyes" id="eye20">͠° ͠°</button>
+		        	<button class="emoji-eyes" id="eye16">° °</button>
+		        </div>
+	        </div>
+	        <div class="keys">
+	        	<div id="first-row">
+					<button class="emoji-face" id="face1">\(      )/</button>
+					<button class="emoji-face" id="face2">ᕦ( )ᕤ</button>
+					<button class="emoji-face" id="face3">(｡   ｡)</button>
+					<button class="emoji-face" id="face4">(ง )ง</button>
+					<button class="emoji-face" id="face5">｡   ｡</button>
+				</div>
+				<div id="second-row">
+					<button class="emoji-face" id="face9">(    )</button>
+					<button class="emoji-face" id="face10">(▰ ▰)</button>
+					<button class="emoji-face" id="face7">≧o     o≦</button>
+					<button class="emoji-face" id="face8">/ /</button>
+					<button class="emoji-face" id="face6">(っ ς)</button>
+				</div>
+				<div id="third-row">
+					<button class="emoji-face" id="face13">     ʖ</button>
+		        	<button class="emoji-face" id="face14">ヾ(  )♪</button>
+		        	<button class="emoji-face" id="face15">(   ✿)</button>
+		            <button class="emoji-face" id="face11">(ღ  ღ)</button>
+		            <button class="emoji-face" id="face12">ʕ(   )ʔ</button>
+		        </div>
+		        <div id="fourth-row">
+		        	<button class="emoji-face" id="face17">(  ')</button>
+		        	<button class="emoji-face" id="face18">ᕙ(  )ᕗ</button>
+		        	<button class="emoji-face" id="face19">ᕦ(  )ᕤ</button>
+		        	<button class="emoji-face" id="face20">*(  )*</button>
+		        	<button class="emoji-face" id="face16">(づ  )づ</button>
+		        </div>
+	        </div>
+	        <div class="keys">
+	        	<div id="first-row">
+					<button class="emoji-mouth" id="mouth1">ε</button>
+					<button class="emoji-mouth" id="mouth2">﹏</button>
+					<button class="emoji-mouth" id="mouth3">∀</button>
+					<button class="emoji-mouth" id="mouth4">‿</button>
+					<button class="emoji-mouth" id="mouth5">▾</button>
+				</div>
+				<div id="second-row">
+					<button class="emoji-mouth" id="mouth9">‸</button>
+					<button class="emoji-mouth" id="mouth10">‿‿</button>
+					<button class="emoji-mouth" id="mouth7">_</button>
+					<button class="emoji-mouth" id="mouth8">ω</button>
+					<button class="emoji-mouth" id="mouth6">ロ</button>
+				</div>
+				<div id="third-row">
+					<button class="emoji-mouth" id="mouth13">~</button>
+		        	<button class="emoji-mouth" id="mouth14">◡</button>
+		        	<button class="emoji-mouth" id="mouth15">Д</button>
+		            <button class="emoji-mouth" id="mouth11">人</button>
+		            <button class="emoji-mouth" id="mouth12">ᴥ</button>
+		        </div>
+		        <div id="fourth-row">
+		        	<button class="emoji-mouth" id="mouth17">ᗩ</button>
+		        	<button class="emoji-mouth" id="mouth18">ڡ</button>
+		        	<button class="emoji-mouth" id="mouth19">▽</button>
+		        	<button class="emoji-mouth" id="mouth20">L</button>
+		        	<button class="emoji-mouth" id="mouth16">ʖ</button>
+		        </div>
+	        </div>
+	    </div>
+	</div>
+</div>
 
-    <title>Rui's Portfolio</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
-
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Rui's Homepage</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">Hi, I'm Rui Sun</h1>
-          <hr>
-          <p>I'm 20, a Cognitive Science major at UC Berkeley. </p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Learn More about Me</a>
-        </div>
-      </div>
-    </header>
-
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">My career interests</h2>
-            <hr class="light">
-            <p class="text-faded">I have experience in product marketing, business writing, event planning and skills in Python, SQL, CSS, HTML and JavaScript. I am also taking three product design classes to learn more about UX design and UX research. I am interested in product marketing as well as other business roles in tech. I'm also open to new opportunities.</p>
-            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">See My Projects</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">What I've Worked on</h2>
-            <hr class="primary">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-              <h3>Cognitive Science</h3>
-              <p class="text-muted">Cognitive science is the interdisciplinary study of mind and intelligence, embracing philosophy, psychology, artificial intelligence, neuroscience, linguistics.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-              <h3>Product Marketing</h3>
-              <p class="text-muted">In my perspective, product marketing conveys the value of a product to the right audience. It's integral to any business.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-              <h3>Event Planning</h3>
-              <p class="text-muted">I plan events to bring people together and foster a community.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-              <h3>Product Design</h3>
-              <p class="text-muted">Design strives to meet the midpoint of technology, business and people.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid">
-        <div class="row no-gutter popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Summer 2017
-                  </div>
-                  <div class="project-name">
-                    Product Marketing Intern at Conversica
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Fall 2017
-                  </div>
-                  <div class="project-name">
-                    Director of Event Planning at FEM Tech Berkeley
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Fall 2017
-                  </div>
-                  <div class="project-name">
-                    Design project: redesigning seating situation in UC Berkeley library
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Fall 2017
-                  </div>
-                  <div class="project-name">
-                    Design project: designing a solution for tangled cords
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Fall 2017
-                  </div>
-                  <div class="project-name">
-                    Design project: designing a product to deal with anxiety in college
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Spring 2017
-                  </div>
-                  <div class="project-name">
-                    Lab Assistant at UC Berkeley Data Science Department
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="primary">
-            <p>Liking what you see? Get in touch with me and let's chat!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fa fa-phone fa-3x sr-contact"></i>
-            <p>www.linkedin.com/in/rui-sun/</p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">jesssunr@gmail.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
-
-  </body>
-
+</body>
 </html>

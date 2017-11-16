@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #e0ffff ;
+    
+}
+
+
+h1 {
+	font-family: 'Comfortaa', cursive;
+	text-align: center;
+	color: black;
+	margin-top: 50px;
+	font-size: 24px;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+#container {
+    width:450px;
+    height:800px;
+    margin:50px auto;
+    background:#66cdaa;
+    margin-bottom: 100px;
+    border-radius: 5px;
+}
+
+#top-bar {
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; 
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+#title {
+    margin: 0 auto;
+    text-align: center;
+    display: inline-table;
+    position: relative;
+}
+
+#next1 {
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: right;
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    background: white;
+}
+
+#help {
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: left;
+    vertical-align: middle;
+    line-height: 40px;
+    background: #66cdaa;
+}
+
+#next2 {
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: right;
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    background: white;
+}
+
+#back1 {
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: left;
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    background: white;
+}
+
+#back2 {
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: left;
+    font-size: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    background: white;
+}
+
+
+#done {
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: right;
+    font-size: 15px;
+    vertical-align: middle;
+    line-height: 40px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#clear {
+    margin-top: 5px;
+    margin-right: 10px;
+    border: 0;
+    width: 60px;
+    height: 40px;
+    float: right;
+    font-size: 15px;
+    vertical-align: middle;
+    line-height: 40px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#result {
+    height: 480px;
+    background: white;
+}
+
+#image-holder {
+    height: 70px;
+    width: 250px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+#left-eye-holder {
+    color: black;
+    font-size: 300%;
+    letter-spacing: 10px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#right-eye-holder {
+    color:  black;
+    font-size: 300%;
+    letter-spacing: 10px;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#left-face-holder {
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#right-face-holder {
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+#mouth-holder {
+    display: inline;
+    color:  black;
+    font-size: 200%;
+}
+
+
+#next1, #next2, #back1, #back2, #done, #clear, .emoji-eyes, .emoji-face, .emoji-mouth:hover { 
+    cursor: pointer; 
+}
+
+
+#keyboard-container {
+    height: 270px;
+    position: relative;
+    /*background: #66cdaa;*/
+}
+
+#keyboard {
+    display: table;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    /*background: black;*/
+}
+
+.emoji-eyes, .emoji-face, .emoji-mouth {
+    border:0;
+    background: white;
+    width: 80px;
+    height: 55px;
+    margin: 3px;
+    margin-top: 5px;
+    color: black;
+    font-size: 120%;
+    letter-spacing: 1px;
+}
+
+
